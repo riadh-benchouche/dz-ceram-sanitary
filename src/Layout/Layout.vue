@@ -4,11 +4,9 @@ import Footer from "@/Layout/Footer.vue";
 </script>
 
 <template>
-  <div class="bg-white">
-    <NavBar/>
-    <main>
-      <slot/>
-    </main>
-    <Footer/>
-  </div>
+  <NavBar/>
+  <main>
+    <slot/>
+  </main>
+  <Footer/>
 </template>

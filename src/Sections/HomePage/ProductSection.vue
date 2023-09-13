@@ -36,17 +36,18 @@ const products = [
     <div class="mx-auto max-w-7xl px-6 text-center lg:px-8 z-20">
       <div class="flex justify-between items-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900">Nos produits</h2>
-        <a href="#" class="leading-8 text-primary cursor-pointer">Voir tous
+        <a href="/products" class="leading-8 text-primary cursor-pointer">Voir tous
           <ArrowRightIcon class="inline-block w-5 h-5 ml-1"/>
         </a>
       </div>
       <ul role="list"
           class="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4 lg:gap-8">
-        <li v-for="(product,index) in products" :key="index"
-            class="rounded-lg bg-white shadow-lg px-6 py-4 text-start">
+        <a v-for="(product,index) in products" :key="index"
+           :href="`/products/${index}`"
+           class="rounded-lg bg-white shadow-lg px-6 py-4 text-start">
           <produit-card :name="product.name" :description="product.description"
                         :image="product.imageUrl"/>
-        </li>
+        </a>
       </ul>
     </div>
   </div>
